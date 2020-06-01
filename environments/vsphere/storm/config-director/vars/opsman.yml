@@ -1,5 +1,5 @@
 opsman_vm_name: pivotal-ops-manager
 opsman_private_ip: 192.168.7.10
 opsman_netmask: 255.255.255.0
-opsman_host: opsmgr.lab.winterfell.live
+opsman_host: pao-opsmgr-01.storm.pvd.pez.pivotal.io
 vsphere_resource_pool: pcf
