@@ -23,12 +23,13 @@ resources:
 - name: platform-automation
   type: pivnet
   source:
-    api_token: ((pivnet_token))
+    api_token: ((pivnet-token))
     product_slug: platform-automation
 
 - name: installation
   type: s3
   source:
+    endpoint: https://minio.customer0.io
     access_key_id: ((s3_access_key_id))
     bucket: ((s3_buckets_installation))
     region_name: ((s3_region_name))

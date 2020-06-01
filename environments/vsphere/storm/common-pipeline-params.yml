@@ -1,6 +1,6 @@
 s3_region_name: us-east-2
-s3_buckets_product: platform-automation-product
-s3_buckets_installation: platform-automation-installation
+s3_buckets_product: jpmc-product
+s3_buckets_installation: jpmc-installation
 credhub_server: https://vault.customer0.io
 foundation: storm
 iaas: vsphere
