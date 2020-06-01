@@ -1,6 +1,7 @@
 s3_region_name: us-east-2
 s3_buckets_product: jpmc-product
 s3_buckets_installation: jpmc-installation
+s3_endpoint: https://minio.customer0.io
 credhub_server: https://vault.customer0.io
 foundation: storm
 iaas: vsphere
