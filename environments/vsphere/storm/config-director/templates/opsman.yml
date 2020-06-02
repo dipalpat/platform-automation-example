@@ -15,7 +15,7 @@ opsman-configuration:
     ntp: ((ntp))                    # example: ntp.ubuntu.com
     ssh_public_key: ((opsman_ssh.public_key))
     hostname: ((opsman_host))
-    network: ((infrastructure_network))               # vcenter network to deploy to
+    network: ((infrastructure_network_vds1))               # vcenter network to deploy to
     netmask: ((opsman_netmask))
     gateway: ((infrastructure_gateway))
     vm_name: ((opsman_vm_name))

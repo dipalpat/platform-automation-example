@@ -3,7 +3,14 @@ az-configuration:
   clusters:
   - cluster: ((vsphere_az1_cluster))
     resource_pool: ((vsphere_az1_resource_pool))
-
+- name: az2
+  clusters:
+  - cluster: ((vsphere_az12_cluster))
+    resource_pool: ((vsphere_az12_resource_pool))
+- name: az3
+  clusters:
+  - cluster: ((vsphere_az3_cluster))
+    resource_pool: ((vsphere_az3_resource_pool))
 network-assignment:
   singleton_availability_zone:
     name: az1
@@ -16,13 +23,27 @@ networks-configuration:
   - name: infrastructure
     service_network: false
     subnets:
-    - iaas_identifier: ((infrastructure_network))
-      cidr: ((infrastructure_network_cidr))
-      reserved_ip_ranges: ((infrastructure_network_reserved))
+    - iaas_identifier: ((infrastructure_network_vds1))
+      cidr: ((infrastructure_network_vds1_cidr))
+      reserved_ip_ranges: ((infrastructure_network_vds1_reserved))
       dns: ((dns))
-      gateway: ((infrastructure_gateway))
+      gateway: ((infrastructure_vds1_gateway))
       availability_zone_names:
       - az1
+    - iaas_identifier: ((infrastructure_network_vds2))
+      cidr: ((infrastructure_network_vds2_cidr))
+      reserved_ip_ranges: ((infrastructure_network_vds2_reserved))
+      dns: ((dns))
+      gateway: ((infrastructure_vds2_gateway))
+      availability_zone_names:
+      - az2
+    - iaas_identifier: ((infrastructure_network_vds3))
+      cidr: ((infrastructure_network_vds3_cidr))
+      reserved_ip_ranges: ((infrastructure_network_vds3_reserved))
+      dns: ((dns))
+      gateway: ((infrastructure_vds3_gateway))
+      availability_zone_names:
+      - az3    
   - name: deployment
     service_network: false
     subnets:

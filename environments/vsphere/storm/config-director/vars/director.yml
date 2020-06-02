@@ -1,28 +1,63 @@
-dns: 192.168.7.1
+dns: 10.192.2.10,10.192.2.11
 ntp: time1.google.com,time2.google.com,time3.google.com,time4.google.com
 
 vcenter_hostname: 192.168.7.105
 vcenter_userid: administrator@vsphere.local
 vsphere_templates_folder: pcf_templates
 vsphere_disks_folder: pcf_disk
-vsphere_az1_cluster: Cluster1
-vsphere_az1_resource_pool: pcf
+vsphere_az1_cluster: AZ01
+vsphere_az1_resource_pool: ""
+vsphere_az2_cluster: AZ02
+vsphere_az2_resource_pool: ""
+vsphere_az3_cluster: AZ03
+vsphere_az3_resource_pool: ""
+
 vsphere_datastore: datastore1
 vsphere_datacenter: Datacenter
 vsphere_vms_folder: pcf_vms
 
-infrastructure_network: "VM Network"
-infrastructure_network_cidr: 192.168.7.0/24
-infrastructure_network_reserved: 192.168.7.0-192.168.7.10,192.168.7.30-192.168.7.255
-infrastructure_gateway: 192.168.7.1
+infrastructure_network_vds1: "pao-edge-cluster-pao-w01-vc-AZ01-vds01/jpmc-pas-infrastructure-az1-ls"
+infrastructure_network_vds1_cidr: 192.168.8.0/24
+infrastructure_network_vds1_reserved: 192.168.8.0-192.168.8.10
+infrastructure_vds1_gateway: 192.168.8.1
 
-deployment_network: VM Network
-deployment_network_cidr: 192.168.7.0/24
-deployment_network_reserved: 192.168.7.0-192.168.7.29,192.168.7.80-192.168.7.255
-deployment_gateway: 192.168.7.1
+infrastructure_network_vds2: "pao-edge-cluster-pao-w01-vc-AZ02-vds01/jpmc-pas-infrastructure-az2-ls"
+infrastructure_network_vds2_cidr: 192.168.9.0/24
+infrastructure_network_vds2_reserved: 192.168.9.0-192.168.9.10
+infrastructure_vds2_gateway: 192.168.9.1
 
-services_network: VM Network
-services_network_cidr: 192.168.7.0/24
-services_network_reserved: 192.168.7.0-192.168.7.149,192.168.7.180-192.168.7.255
-services_gateway: 192.168.7.1
+infrastructure_network_vds3: "pao-edge-cluster-pao-w01-vc-AZ03-vds01/jpmc-pas-infrastructure-az3-ls"
+infrastructure_network_vds3_cidr: 192.168.10.0/24
+infrastructure_network_vds3_reserved: 192.168.10.0-192.168.10.10
+infrastructure_vds3_gateway: 192.168.10.1
+
+deployment_network_vds1: "pao-edge-cluster-pao-w01-vc-AZ01-vds01/jpmc-pas-deployment-az1-ls"
+deployment_network_vds1_cidr: 192.168.16.0/24
+deployment_network_vds1_reserved: 192.168.16.0-192.168.16.10
+deployment_vds1_gateway: 192.168.16.1
+
+deployment_network_vds2: "pao-edge-cluster-pao-w01-vc-AZ02-vds01/jpmc-pas-deployment-az2-ls"
+deployment_network_vds2_cidr: 192.168.17.0/24
+deployment_network_vds2_reserved: 192.168.17.0-192.168.17.10
+deployment_vds2_gateway: 192.168.17.1
+
+deployment_network_vds3: "pao-edge-cluster-pao-w01-vc-AZ03-vds01/jpmc-pas-deployment-az3-ls"
+deployment_network_vds3_cidr: 192.168.18.0/24
+deployment_network_vds3_reserved: 192.168.18.0-192.168.18.10
+deployment_vds3_gateway: 192.168.18.1
+
+services_network_vds1: "pao-edge-cluster-pao-w01-vc-AZ01-vds01/jpmc-pas-services-az1-ls"
+services_network_vds1_cidr: 192.168.32.0/24
+services_network_vds1_reserved: 192.168.32.0-192.168.32.10
+services_vds1_gateway: 192.168.32.1
+
+services_network_vds2: "pao-edge-cluster-pao-w01-vc-AZ02-vds01/jpmc-pas-services-az2-ls"
+services_network_vds2_cidr: 192.168.33.0/24
+services_network_vds2_reserved: 192.168.33.0-192.168.33.10
+services_vds2_gateway: 192.168.339.1
+
+services_network_vds3: "pao-edge-cluster-pao-w01-vc-AZ03-vds01/jpmc-pas-services-az3-ls"
+services_network_vds3_cidr: 192.168.3410.0/24
+services_network_vds3_reserved: 192.168.1034.0-192.168.1034.10
+services_vds3_gateway: 192.168.1034.1
 
