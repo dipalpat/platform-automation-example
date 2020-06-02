@@ -51,7 +51,7 @@ properties-configuration:
   iaas_configuration:
     vcenter_host: ((vcenter_hostname))
     vcenter_username: ((vcenter_userid))
-    vcenter_password: ((vcenter_password))
+    vcenter_password: ((vsphere_vcenter_password))
     datacenter: ((vsphere_datacenter))
     ssl_verification_enabled: false
     disk_type: thin

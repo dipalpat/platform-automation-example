@@ -73,18 +73,16 @@ resources:
 # The yaml anchor "*interpolate-creds" is used in its place
 interpolate-creds: &interpolate-creds
   image: platform-automation-image
-  file: platform-automation-tasks/tasks/credhub-interpolate.yml
-  params: 
-    CREDHUB_SERVER: ((credhub_server))
-    CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
-    CREDHUB_CLIENT: concourse_to_credhub_client
-    CREDHUB_SECRET: ((concourse_to_credhub_client_secret))
-    PREFIX: '/((foundation))-foundation'
-    INTERPOLATION_PATHS: "environments/((iaas))/((foundation))/config-common/secrets environments/((iaas))/((foundation))/config-director/secrets"
+  file: testing-secrets/task.yml
   input_mapping:
-    files: director-configuration
+    tasks: platform-automation-tasks
+    config: deployments
+    vars: deployments  # required only if using vars
   output_mapping:
-    interpolated-files: interpolated-files
+    tasks: platform-automation-tasks
+  params:
+    CONFIG_PATHS: "environments/((iaas))/((foundation))/config-common/secrets environments/((iaas))/((foundation))/config-director/secrets"
+    #VARS_PATHS: "environments/((iaas))/((foundation))/config-common/secrets environments/((iaas))/((foundation))/config-director/secrets"
 
 jobs:
 

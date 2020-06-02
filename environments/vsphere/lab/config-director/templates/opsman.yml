@@ -3,7 +3,7 @@ opsman-configuration:
     vcenter:
       url: ((vcenter_hostname)) # in credhub
       username: ((vcenter_userid)) # in credhub
-      password: ((vcenter_password)) # in credhub
+      password: ((vsphere_vcenter_password)) # in credhub
       datastore: ((vsphere_datastore)) # in vars file
       datacenter: ((vsphere_datacenter)) # in vars file
       resource_pool: ((vsphere_resource_pool)) # in vars file
@@ -13,7 +13,7 @@ opsman-configuration:
     private_ip: ((opsman_private_ip))
     dns: ((dns))
     ntp: ((ntp))                    # example: ntp.ubuntu.com
-    ssh_public_key: ((opsman_ssh.public_key))
+    ssh_public_key: ((vsphere_ssh_public_key))
     hostname: ((opsman_host))
     network: ((infrastructure_network))               # vcenter network to deploy to
     netmask: ((opsman_netmask))
